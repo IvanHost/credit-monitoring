@@ -1,0 +1,74 @@
+<html> 
+	<head> 
+		<title></title> 
+		<style type="text/css"> 
+			body,table{ 
+				font-size:12px; 
+			} 
+			table{ 
+				table-layout:fixed; 
+				empty-cells:show; 
+				border-collapse: collapse; 
+				margin:0 auto; 
+			} 
+			td{ 
+				height:30px;
+				text-align:center;
+			} 
+			h1,h2,h3{ 
+				
+			} 
+		.table{ 
+			border:1px solid #cad9ea; 
+			color:#666; 
+		} 
+		.table th { 
+			background-repeat:repeat-x; 
+			height:30px; 
+		} 
+		.table td,.table th{ 
+			border:1px solid #cad9ea; 
+			padding:0 1em 0; 
+		} 
+		.table tr.alter{ 
+			background-color:#f5fafe; 
+		} 
+		</style> 
+	</head> 
+	<body>
+		<h1 style="text-align:center">信贷核心系统运维监控信息</h1>
+		<h3 style="text-align:center">来自${localIp}监控，时间：${curDateTime}</h3>
+		<table width="95%" class="table"> 
+			<tr> 
+				<th width="250px">监控规则</th> 
+				<th>反馈结果</th> 
+				<th width="50px">耗时(ms)</th> 
+				<th width="250px">备注</th> 
+			</tr> 
+			<tr> 
+				<td>检查未回盘规则</td> 
+				<td>${checkDelayOfferState}</td> 
+				<td>${checkDelayOfferStateTime}</td> 
+				<td>${result}</td> 
+			</tr>
+			<tr> 
+				<td>监控回盘成功未入账</td> 
+				<td>${CheckRepayOffer}</td> 
+				<td>${CheckRepayOfferTime}</td> 
+				<td>${result}</td> 
+			</tr>
+			<tr> 
+				<td>监控日终晚回盘</td> 
+				<td>${CheckLaterReturnOfferForRepayDay}</td> 
+				<td>${CheckLaterReturnOfferForRepayDayTime}</td> 
+				<td>${result}</td> 
+			</tr>
+			<tr> 
+				<td>监控日终期末预收</td> 
+				<td>${CheckRepaymentEnd}</td> 
+				<td>${CheckRepaymentEndTime}</td> 
+				<td>${result}</td> 
+			</tr>
+		</table> 
+	</body> 
+</html> 
