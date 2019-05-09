@@ -12,4 +12,5 @@ System-Monitoring/
 	├── run.sh				//运行文件（Linux）
 	├── run.kjb				//内置Job转换器
 
-基于Kettle实现
+日常监控，基于Kettle实现
+JDK1.7版本
